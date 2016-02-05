@@ -1,0 +1,45 @@
+<!--Insert-->
+<template name="staffInset">
+    <h2>Insert Form</h2>
+
+    {{> wizard id="staffInset" steps=steps stepsTemplate="steps_bootstrap3" clearOnDestroy=true buttonClasses="btn btn-primary"}}
+
+    <hr>
+    <ul>
+        {{#each data}}
+            <li>
+                ID: {{_id}}, Name: {{name}}, Telephone: {{telephone}}
+                <a href="{{pathFor "staffUpdate" staffId=_id}}">Edit</a>
+            </li>
+        {{/each}}
+    </ul>
+</template>
+
+<!--Update-->
+<template name="staffUpdate">
+    <h2>Update Form</h2>
+
+    {{> wizard id="staffUpdate" steps=steps stepsTemplate="steps_bootstrap3" clearOnDestroy=true buttonClasses="btn btn-primary"}}
+</template>
+
+<!--Set-->
+<template name="staffStep1">
+    {{#autoForm id="staffStep1" schema=step.schema doc=step.data}}
+
+        {{> afQuickField name=name}}
+        {{> afQuickField name=gender}}
+
+        {{> wizardButtons}}
+    {{/autoForm}}
+</template>
+
+<template name="staffStep2">
+    {{#autoForm id="staffStep2" schema=step.schema doc=step.data}}
+
+        {{> afQuickField name=telephone}}
+        {{> afQuickField name=address}}
+
+        {{> wizardButtons}}
+
+    {{/autoForm}}
+</template>
