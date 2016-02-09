@@ -24,9 +24,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/quickForm/quickForm.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/afObjectField/afObjectField.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-horizontal/inputTypes/boolean-checkbox/boolean-checkbox.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.1/web.browser/meteor/export.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/quickForm/quickForm.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.1/web.browser/moment.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/url/1.0.5/web.browser/packages/url.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/afFormGroup/afFormGroup.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/afArrayField/afArrayField.css" />
@@ -113,6 +111,8 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-horizontal/bootstrap3-horizontal.css" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/autoForm/autoForm.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/service-configuration/1.0.5/web.browser/packages/service-configuration.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.2/web.browser/meteor/export.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.2/web.browser/moment.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/mongo-id/1.0.1/web.browser/packages/mongo-id.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/quickForm/quickForm.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/afFormGroup/afFormGroup.js" />
@@ -208,9 +208,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/quickForm/quickForm.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/afObjectField/afObjectField.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-horizontal/inputTypes/boolean-checkbox/boolean-checkbox.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.1/web.browser/meteor/export.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/quickForm/quickForm.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.1/web.browser/moment.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/url/1.0.5/web.browser/packages/url.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/afFormGroup/afFormGroup.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/afArrayField/afArrayField.css" />
@@ -297,6 +295,8 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-horizontal/bootstrap3-horizontal.css" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/autoForm/autoForm.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/service-configuration/1.0.5/web.browser/packages/service-configuration.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.2/web.browser/meteor/export.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/momentjs_moment/2.11.2/web.browser/moment.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/mongo-id/1.0.1/web.browser/packages/mongo-id.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/quickForm/quickForm.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/afFormGroup/afFormGroup.js" />

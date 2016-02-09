@@ -1,95 +1,74 @@
-// Schema
-Schemas = {};
-Schemas.step1 = new SimpleSchema({
-    name: {
-        type: String,
-        label: 'Name'
-    },
-    gender: {
-        type: String,
-        label: 'Gender',
-        autoform: {
-            type: 'select',
-            options: function () {
-                return [
-                    {label: '(Select One)', value: ''},
-                    {label: 'Male', value: 'M'},
-                    {label: 'Female', value: 'F'}
-                ];
-            }
-        }
-    }
-});
-Schemas.step2 = new SimpleSchema({
-    telephone: {
-        type: String,
-        label: 'Telephone'
-    },
-    address: {
-        type: String,
-        label: 'Address'
-    }
-});
-
 // insert
 Template.staffInset.helpers({
+    dataList: function () {
+        return Staff.find();
+    },
     steps: function () {
         return [{
-            id: 'wizardStep1',
+            id: 'general',
             title: 'General',
-            template: 'staffStep1',
-            formId: 'staffStep1',
-            schema: Schemas.step1
+            template: 'staffGeneral',
+            formId: 'staffGeneral',
+            schema: Schemas.general
         }, {
-            id: 'wizardStep2',
+            id: 'contact',
             title: 'Contact',
-            template: 'staffStep2',
-            formId: 'staffStep2',
-            schema: Schemas.step2,
+            template: 'staffContact',
+            formId: 'staffContact',
+            schema: Schemas.contact,
             onSubmit: function (data, wizard) {
                 var self = this;
                 var extend = _.extend(wizard.mergedData(), data);
 
-                Staff.insert(extend);
-
-                alert('Inserted Success!');
+                // Insert
+                Staff.insert(extend, function (error, result) {
+                    if (!error) {
+                        wizard.show('general');
+                        alert('Inserted Success!');
+                    }
+                });
             }
         }];
     }
 });
 
-// update
 Template.staffUpdate.helpers({
     steps: function () {
+        // Get data for update form
+        var staffId = FlowRouter.getParam('staffId');
+        var data = Staff.findOne(staffId);
+
         return [{
-            id: 'step1',
+            id: 'general',
             title: 'General',
-            template: 'staffStep1',
-            data: function () {
-                var id = FlowRouter.getParams('clientId');
-                return Staff.findOne(id);
-            },
-            schema: Schemas.step1
+            template: 'staffGeneral',
+            formId: 'staffGeneral',
+            schema: Schemas.general,
+            data: data
         }, {
-            id: 'step2',
+            id: 'contact',
             title: 'Contact',
-            template: 'staffStep2',
-            data: function () {
-                var id = FlowRouter.getParams('clientId');
-                return Staff.findOne(id);
-            },
-            schema: Schemas.step2,
+            template: 'staffContact',
+            formId: 'staffContact',
+            schema: Schemas.contact,
+            data: data,
             onSubmit: function (data, wizard) {
                 var self = this;
                 var extend = _.extend(wizard.mergedData(), data);
 
+                console.log('Update:');
                 console.log(self);
                 console.log(extend);
 
-                //Staff.update(_id, {$set: extend});
-
-                alert('Updated Success!');
+                // Update
+                Staff.update(self.docId, {$set: extend}, function (error, result) {
+                    if (!error) {
+                        FlowRouter.go('staffInsert');
+                        alert('Updated Success!');
+                    }
+                });
             }
         }];
     }
 });
+

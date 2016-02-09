@@ -4,12 +4,17 @@
 
     {{> wizard id="staffInset" steps=steps stepsTemplate="steps_bootstrap3" clearOnDestroy=true buttonClasses="btn btn-primary"}}
 
+    <!--Data List-->
     <hr>
     <ul>
-        {{#each data}}
+        {{#each dataList}}
             <li>
-                ID: {{_id}}, Name: {{name}}, Telephone: {{telephone}}
-                <a href="{{pathFor "staffUpdate" staffId=_id}}">Edit</a>
+                ID: {{_id}} |
+                Name: {{name}} |
+                Gender: {{gender}} |
+                Telephone: {{telephone}} |
+                Address: {{address}}
+                <a href="{{pathFor "staffUpdate" staffId=_id}}" class="btn btn-primary">Edit</a>
             </li>
         {{/each}}
     </ul>
@@ -22,22 +27,21 @@
     {{> wizard id="staffUpdate" steps=steps stepsTemplate="steps_bootstrap3" clearOnDestroy=true buttonClasses="btn btn-primary"}}
 </template>
 
-<!--Set-->
-<template name="staffStep1">
-    {{#autoForm id="staffStep1" schema=step.schema doc=step.data}}
-
-        {{> afQuickField name=name}}
-        {{> afQuickField name=gender}}
+<!--Wizard Step-->
+<template name="staffGeneral">
+    {{#autoForm id="staffGeneral" schema=step.schema doc=step.data}}
+        {{> afQuickField name="name"}}
+        {{> afQuickField name="gender"}}
 
         {{> wizardButtons}}
     {{/autoForm}}
 </template>
 
-<template name="staffStep2">
-    {{#autoForm id="staffStep2" schema=step.schema doc=step.data}}
+<template name="staffContact">
+    {{#autoForm id="staffContact" schema=step.schema doc=step.data}}
 
-        {{> afQuickField name=telephone}}
-        {{> afQuickField name=address}}
+        {{> afQuickField name="telephone"}}
+        {{> afQuickField name="address"}}
 
         {{> wizardButtons}}
 

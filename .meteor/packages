@@ -19,6 +19,8 @@ ejson
 spacebars
 check
 accounts-password
+insecure
+autopublish
 
 twbs:bootstrap
 kadira:flow-router
