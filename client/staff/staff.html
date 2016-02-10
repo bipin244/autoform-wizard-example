@@ -24,12 +24,12 @@
 <template name="staffUpdate">
     <h2>Update Form</h2>
 
-    {{> wizard id="staffUpdate" steps=steps stepsTemplate="steps_bootstrap3" clearOnDestroy=true buttonClasses="btn btn-primary"}}
+    {{> wizard id="staffUpdate" steps=steps stepsTemplate="steps_bootstrap3" clearOnDestroy=true buttonClasses="btn btn-primary" }}
 </template>
 
 <!--Wizard Step-->
 <template name="staffGeneral">
-    {{#autoForm id="staffGeneral" schema=step.schema doc=step.data}}
+    {{#autoForm id="staffGeneral" schema=step.schema doc=test}}
         {{> afQuickField name="name"}}
         {{> afQuickField name="gender"}}
 
@@ -38,7 +38,7 @@
 </template>
 
 <template name="staffContact">
-    {{#autoForm id="staffContact" schema=step.schema doc=step.data}}
+    {{#autoForm id="staffContact" schema=step.schema doc=test}}
 
         {{> afQuickField name="telephone"}}
         {{> afQuickField name="address"}}
