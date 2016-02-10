@@ -31,6 +31,18 @@ Template.staffInset.helpers({
         }];
     }
 });
+Template.staffGeneral.helpers({
+	test:function(){
+		var staffId = FlowRouter.getParam('staffId');
+        return Staff.findOne(staffId); 
+	}
+});
+Template.staffContact.helpers({
+	test:function(){
+		var staffId = FlowRouter.getParam('staffId');
+        return Staff.findOne(staffId); 
+	}
+});
 
 Template.staffUpdate.helpers({
     steps: function () {
@@ -44,20 +56,17 @@ Template.staffUpdate.helpers({
             template: 'staffGeneral',
             formId: 'staffGeneral',
             schema: Schemas.general,
-            data: data
         }, {
             id: 'contact',
             title: 'Contact',
             template: 'staffContact',
             formId: 'staffContact',
             schema: Schemas.contact,
-            data: data,
             onSubmit: function (data, wizard) {
                 var self = this;
                 var extend = _.extend(wizard.mergedData(), data);
-
-                console.log('Update:');
-                console.log(self);
+				console.log('Update:');
+                console.log(self.docId);
                 console.log(extend);
 
                 // Update
@@ -69,6 +78,7 @@ Template.staffUpdate.helpers({
                 });
             }
         }];
-    }
+    },
+   
 });
 
